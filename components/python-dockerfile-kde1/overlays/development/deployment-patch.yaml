@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: python-dockerfile-kde1
+  namespace: jkopriva-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload@sha256:761986e87ce735daa11a39f08ad6386e8f8423bf78ea9e46a047d45752982fd3
+        name: container-image
+        resources: {}
+status: {}
